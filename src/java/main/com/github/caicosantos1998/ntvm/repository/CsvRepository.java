@@ -8,16 +8,18 @@ import java.main.com.github.caicosantos1998.ntvm.model.PingResult;
 import java.main.com.github.caicosantos1998.ntvm.service.MetricsTracker;
 import java.time.format.DateTimeFormatter;
 
+// The class responsible for writing the monitoring data to the CSV file.
 public class CsvRepository {
     private final String filePath;
     private final DateTimeFormatter dateTimeFormatter;
 
     public CsvRepository(String filePath, DateTimeFormatter dateTimeFormatter) {
         this.filePath = filePath;
-        this.dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
+        this.dateTimeFormatter = dateTimeFormatter;
         initializeHeader();
     }
 
+    // Create the file header if it does not already exist
     private void initializeHeader() {
         File file = new File(filePath);
         if (!file.exists() || file.length() == 0) {
@@ -29,6 +31,7 @@ public class CsvRepository {
         }
     }
 
+    // Records a new log entry containing the ping data and current metrics.
     public void log(PingResult result, MetricsTracker tracker) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(filePath, true))) {
             String timeStampFormate = result.timeStamp().format(dateTimeFormatter);
