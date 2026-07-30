@@ -22,6 +22,10 @@
 dist/
 NetViewMonitor/
 *.csv
+.idea/
+*.iml
+out/
+bin/
 
 # Env File
 .env
