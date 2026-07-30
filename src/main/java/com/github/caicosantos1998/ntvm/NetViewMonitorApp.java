@@ -1,11 +1,11 @@
-package java.main.com.github.caicosantos1998.ntvm;
+package main.java.com.github.caicosantos1998.ntvm;
 
-import java.main.com.github.caicosantos1998.ntvm.model.PingResult;
-import java.main.com.github.caicosantos1998.ntvm.repository.CsvRepository;
-import java.main.com.github.caicosantos1998.ntvm.service.LinuxPingParser;
-import java.main.com.github.caicosantos1998.ntvm.service.MetricsTracker;
-import java.main.com.github.caicosantos1998.ntvm.service.PingParser;
-import java.main.com.github.caicosantos1998.ntvm.service.WindowsPingParser;
+import main.java.com.github.caicosantos1998.ntvm.model.PingResult;
+import main.java.com.github.caicosantos1998.ntvm.repository.CsvRepository;
+import main.java.com.github.caicosantos1998.ntvm.service.LinuxPingParser;
+import main.java.com.github.caicosantos1998.ntvm.service.MetricsTracker;
+import main.java.com.github.caicosantos1998.ntvm.service.PingParser;
+import main.java.com.github.caicosantos1998.ntvm.service.WindowsPingParser;
 import java.time.format.DateTimeFormatter;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
