@@ -1,11 +1,11 @@
-package java.main.com.github.caicosantos1998.ntvm.repository;
+package main.java.com.github.caicosantos1998.ntvm.repository;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.main.com.github.caicosantos1998.ntvm.model.PingResult;
-import java.main.com.github.caicosantos1998.ntvm.service.MetricsTracker;
+import main.java.com.github.caicosantos1998.ntvm.model.PingResult;
+import main.java.com.github.caicosantos1998.ntvm.service.MetricsTracker;
 import java.time.format.DateTimeFormatter;
 
 // The class responsible for writing the monitoring data to the CSV file.

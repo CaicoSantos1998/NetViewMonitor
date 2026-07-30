@@ -1,7 +1,7 @@
-package java.main.com.github.caicosantos1998.ntvm.service;
+package main.java.com.github.caicosantos1998.ntvm.service;
 
-import java.main.com.github.caicosantos1998.ntvm.model.ConnectionStatus;
-import java.main.com.github.caicosantos1998.ntvm.model.PingResult;
+import main.java.com.github.caicosantos1998.ntvm.model.ConnectionStatus;
+import main.java.com.github.caicosantos1998.ntvm.model.PingResult;
 
 public class MetricsTracker {
     private long minPing = Long.MAX_VALUE;

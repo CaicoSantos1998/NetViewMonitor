@@ -1,4 +1,4 @@
-package java.main.com.github.caicosantos1998.ntvm.model;
+package main.java.com.github.caicosantos1998.ntvm.model;
 
 public enum ConnectionStatus {
     ONLINE,
