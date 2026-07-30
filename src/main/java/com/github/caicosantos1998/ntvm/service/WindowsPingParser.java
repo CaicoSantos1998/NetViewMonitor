@@ -9,7 +9,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class WindowsPingParser implements PingParser {
-    private static final Pattern PATTERN_TIME = Pattern.compile("tempo[=<](?<tempo>\\d+)ms");
+    private static final Pattern PATTERN_TIME = Pattern.compile("(\\d+)\\s*ms");
     private final String targetHost;
 
     public WindowsPingParser(String targetHost) {
@@ -27,7 +27,7 @@ public class WindowsPingParser implements PingParser {
                 while ((line = reader.readLine()) != null) {
                     Matcher matcher = PATTERN_TIME.matcher(line.toLowerCase());
                     if (matcher.find()) {
-                        long latency = Long.parseLong(matcher.group("tempo"));
+                        long latency = Long.parseLong(matcher.group(1));
                         return new PingResult(now, ConnectionStatus.ONLINE, latency);
                     }
                 }
