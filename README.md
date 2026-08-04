@@ -39,8 +39,14 @@ Time, Status, Ping_ms, Lowest_Ping, Highest_Ping, Average_Ping
 
 2026-07-29 17:01:05.123,ONLINE,14,14,14,14
 
-2026-07-29 17:01:06.125,ONLINE,18,14,18,16
-
-2026-07-29 17:01:07.130,TIMEOUT,0,14,18,16
-
-2026-07-29 17:01:08.122,OFFLINE,0,14,18,16
+# Roadmap & Future Enhancements
+## Phase 1: Dependency Management & Build Automation
+- Maven/Gradle Integration: Migrate the project structure to Apache Maven or Gradle. This will eliminate manual compilation steps and prepare the project to receive external ecosystem dependencies cleanly.
+## Phase 2: Containerization & Cloud Distribution
+- Docker Packaging: Create a multi-stage DockerFile and a docker-compose.yml environment. This will allow application to run seamlessly on remote server or local container environments without relying on the host's Java installation.
+## Phase 3: Observability & Real-Time Dashboards
+- Database Persistence: Replace the CSV logging layer with a relational Database(PostgreSQL).
+- Grafana Integration: Connect the database to a Grafana server to turn the network logs into real-time, color-coded visual charts for latency and packet drops.
+## Phase 4: Dynamic Process & Connection Discovery
+- Active App Detection: Implement Local OS process sniffing (using tools like netstat, ss, or lsof wrapped in Java) to detect when games like EA Sports, CS2, or RocketLeague are launched.
+- Dynamic Target Parsing: Automatically extract the active game server's remote IPs to monitor them dynamically, removing the need for pre-configured domain hostnames.
