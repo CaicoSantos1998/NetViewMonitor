@@ -1,4 +1,4 @@
-package main.java.com.github.caicosantos1998.ntvm.model;
+package com.github.caicosantos1998.ntvm.model;
 
 import java.time.LocalDateTime;
 
