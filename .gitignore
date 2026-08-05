@@ -3,7 +3,6 @@
 
 # Log file
 *.log
-*.csv
 
 # BlueJ files
 *.ctxt
@@ -20,19 +19,16 @@
 *.tar.gz
 *.rar
 
-## Folders
-target/
 dist/
 NetViewMonitor/
+*.csv
+.idea/
+*.iml
+out/
 bin/
 
 # Env File
 .env
-
-# Local config
-.idea/
-*.iml
-out/
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
