@@ -1,0 +1,8 @@
+services:
+  net-view-monitor:
+    build: .
+    container_name: net_view_monitor_app
+    network_mode: "host"
+    restart: unless-stopped
+    volumes:
+    - ./my_logs_docker:/app
