@@ -1,9 +1,9 @@
-package main.java.com.github.caicosantos1998.ntvm.service;
+package com.github.caicosantos1998.ntvm.service;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import main.java.com.github.caicosantos1998.ntvm.model.ConnectionStatus;
-import main.java.com.github.caicosantos1998.ntvm.model.PingResult;
+import com.github.caicosantos1998.ntvm.model.ConnectionStatus;
+import com.github.caicosantos1998.ntvm.model.PingResult;
 import java.time.LocalDateTime;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
