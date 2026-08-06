@@ -31,12 +31,12 @@ public class NetViewMonitorApp {
     public NetViewMonitorApp() {
         this.monitors = new ArrayList<>();
         // Configures the connections to be tracked simultaneously.
-        configMonitor("1.1.1.1", "internet_geral.csv");
-        configMonitor("gateway.discord.gg", "ping_discord.csv");
-        configMonitor("://ea.com", "ping_ea_sports.csv");
-        configMonitor("steampowered.com", "ping_counter_strike2.csv");
+        configMonitor("1.1.1.1", "logs/internet_geral.csv");
+        configMonitor("gateway.discord.gg", "logs/ping_discord.csv");
+        configMonitor("://ea.com", "logs/ping_ea_sports.csv");
+        configMonitor("steampowered.com", "logs/ping_counter_strike2.csv");
         configMonitor("account-public-service-prod03.ol.epicgames.com",
-                "ping_rocket_league.csv");
+                "logs/ping_rocket_league.csv");
         this.scheduled = Executors.newScheduledThreadPool(monitors.size());
     }
 
@@ -46,12 +46,9 @@ public class NetViewMonitorApp {
         System.out.println("NET VIEW MONITOR STARTED");
         System.out.println("=====================================================");
         for (MonitorContext context : monitors) {
-            System.out.println(" -> Monitoring: " + context.hostTarget() + " |Saving in: " + context.fileName());
             // Execute the 'executeLoop' method every 1 second.
             scheduled.scheduleAtFixedRate(() -> executeLoop(context), 0, 1, TimeUnit.SECONDS);
         }
-        System.out.println("Press Ctrl+C to exit.");
-        System.out.println("=====================================================");
     }
 
     // Method to detect the user's SO and inject the correct interface

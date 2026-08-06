@@ -4,5 +4,8 @@ services:
     container_name: net_view_monitor_app
     network_mode: "host"
     restart: unless-stopped
+    environment:
+      - TZ=America/Sao_Paulo
     volumes:
-    - ./my_logs_docker:/app
+      - ./my_logs_docker:/app/logs
+      - /etc/localtime:/etc/localtime:ro
